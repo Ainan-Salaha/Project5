@@ -16,9 +16,9 @@
 
     <div class="main-container">
         <div class="header">
-            <h1 id="back_icon">Task <span style="font-weight: 400; color: purple;">List</span></h1>
+            <h1 id="back_icon">Task <span id="sp">List</span></h1>
             <div id="add_task" onclick="popUp()">
-                <h4><i class="fa-solid fa-circle-plus"></i> Add Item</h4>
+                <h4 id="ai"><i class="fa-solid fa-circle-plus"></i> Add Item</h4>
             </div>
         </div>
 
@@ -28,7 +28,7 @@
 
         <div id="cards">
             <div class="card" id="${value.id}">
-                <button id="card_title"> </button>  
+                <button id="card_title" onclick="only_card(this.value)"> ${value.title} </button>  
                 <div class="content">
                     <div class="text">
 

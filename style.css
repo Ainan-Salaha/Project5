@@ -56,6 +56,10 @@ h1 {
 
 
 }
+#sp{
+    font-weight: 400px; 
+    color: purple;
+}
 
 .card {
     width: 300px;
@@ -129,7 +133,7 @@ h1 {
     padding: 20px;
     box-shadow: 0px 1px 10px purple;
     color: purple;
-    
+    overflow: auto;
 }
 .content{
     padding: 15px;

@@ -141,5 +141,48 @@ function markdone(value){
 
 }
 
+function only_card(){
+    document.querySelector('.card').style.display= "block";
+}
+
+function only_card(val){
+    var cardHeader;
+    for(let ele of mainArr){
+        for(let id in ele){
+            if(ele[id]==val){
+                cardHeader = ele.title;
+                break;
+            };
+        };
+    };
+    document.querySelector("#back_icon").innerHTML = `<h1 style="cursor: pointer;"   onclick="hiddenobj()"><span><i class="fa-solid fa-circle-chevron-left"></i></span> Back</h1>`;
+    for(let ele of mainArr){
+            if(ele.id==val){
+                document.getElementById(`${ele.id}`).style.display = 'block';
+            }
+            else {
+                document.getElementById(`${ele.id}`).style.display = 'none';
+            }
+    };
+    document.querySelector('body').style.backgroundColor="purple"
+    document.querySelector('#ai').style.color="white"
+    
+    document.getElementById('card_title').innerText = `${cardHeader}`;
+
+};
+
+function hiddenobj(){
+    document.querySelector("#back_icon").innerHTML = '<h1 id="back_icon">Tasks<span style="color:purple"> List</span> </h1>';
+    for(let ele of mainArr){
+            document.getElementById(`${ele.id}`).style.display = 'block';
+    };
+    document.querySelector('body').style.backgroundColor="plum"
+    document.querySelector('#ai').style.color="purple"
+
+    console.log(mainArr)
+}
+
+
+
 
 
