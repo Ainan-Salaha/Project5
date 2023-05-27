@@ -35,7 +35,6 @@ h1 {
     font-size: 2rem;
     color: purple;
     cursor: pointer;
-
 }
 
 #add_task i {
@@ -184,4 +183,9 @@ h1 {
     font-size: 1.5rem;
     padding: 10px;
     color: purple;
+}
+@media screen and (max-width:400px) {
+    #add_task{
+        font-size: 1.2rem;
+    }
 }
